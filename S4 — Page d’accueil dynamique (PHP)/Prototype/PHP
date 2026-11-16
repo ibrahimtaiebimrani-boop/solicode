@@ -1,0 +1,32 @@
+
+<?php
+$projets = [
+    [
+        "titre" => "ArtVault",
+        "description" => "Une plateforme pour gérer une collection d'objets d'art et de luxe.",
+        "technologies" => "HTML, CSS",
+        "categorie" => "Développement Web",
+        "image" => "https://placehold.co/600x350/171717/D4AF37?text=ArtVault",
+        "statut" => "Terminé"
+    ],
+    [
+        "titre" => "Mon Portfolio",
+        "description" => "Un site personnel pour présenter mes compétences et mes réalisations.",
+        "technologies" => "HTML, CSS",
+        "categorie" => "Portfolio",
+        "image" => "https://placehold.co/600x350/171717/D4AF37?text=Portfolio",
+        "statut" => "En cours"
+    ],
+    [
+        "titre" => "Jeu du nombre secret",
+        "description" => "Un jeu interactif où le joueur doit deviner un nombre secret.",
+        "technologies" => "HTML, CSS, JavaScript",
+        "categorie" => "JavaScript",
+        "image" => "https://placehold.co/600x350/171717/D4AF37?text=Secret+Number",
+        "statut" => "Terminé"
+    ]
+];
+$totalProjets = count($projets);
+require 'index-template.php';
+
+?>
