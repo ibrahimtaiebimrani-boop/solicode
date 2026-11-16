@@ -1,175 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtVault - Détail du projet</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Détail du projet - ArtVault</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
-
 <body>
 
-    <header class="header">
-        <div class="container header-content">
+    <header>
+        <div class="logo">◇ ArtVault</div>
 
-            <a href="index.html" class="logo">IBRAHIM<span>.</span></a>
-
-            <nav>
-                <a href="#presentation">Présentation</a>
-                <a href="#objectifs">Objectifs</a>
-                <a href="#fonctionnalites">Fonctionnalités</a>
-            </nav>
-
-        </div>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Articles</a>
+            <a href="#">Compétences</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
     <main class="container">
 
-        <div class="breadcrumb">
-            <a href="index.html">Portfolio</a>
-            <span>/</span>
-            <span>ArtVault</span>
-        </div>
+        <p class="breadcrumb">
+            Accueil / Mes projets / ArtVault
+        </p>
 
-        <section class="project-hero">
-
-            <span class="project-label">PROJET PERSONNEL</span>
-
+        <section class="project-header">
             <h1>ArtVault</h1>
-
-            <h2>Art & Collectibles Asset Manager</h2>
-
-            <p>
-                ArtVault est un concept d'application Web permettant
-                de gérer et de valoriser une collection d'objets d'art,
-                de montres et d'antiquités.
-            </p>
-
-            <span class="status">Prototype</span>
-
+            <p>Plateforme de gestion des objets d'art et de collection.</p>
+            <span class="status">Projet en cours</span>
         </section>
 
-        <section class="project-information">
+        <section class="project-content">
 
-            <div class="info-card">
-                <h3>Type</h3>
-                <p>Application Web</p>
+            <div class="project-image">
+                <img src="https://placehold.co/900x450/171717/D4AF37?text=ArtVault"
+                     alt="Présentation du projet ArtVault">
             </div>
 
-            <div class="info-card">
-                <h3>Catégorie</h3>
-                <p>Gestion de collection</p>
-            </div>
+            <div class="project-info">
+                <h2>Présentation du projet</h2>
 
-            <div class="info-card">
-                <h3>Rôle</h3>
-                <p>Développeur</p>
-            </div>
+                <p>
+                    ArtVault est une plateforme web destinée à la
+                    gestion et à la valorisation des objets de collection
+                    comme les montres, les tableaux et les antiquités.
+                </p>
 
-            <div class="info-card">
-                <h3>Statut</h3>
-                <p>Prototype</p>
-            </div>
+                <h2>Objectifs</h2>
 
-        </section>
+                <ul>
+                    <li>Gérer une collection d'objets précieux.</li>
+                    <li>Stocker les certificats et les factures.</li>
+                    <li>Consulter la valeur estimée des objets.</li>
+                    <li>Faciliter la gestion des collections.</li>
+                </ul>
 
-        <section id="presentation" class="content-section">
+                <h2>Technologies utilisées</h2>
 
-            <h2>01. Présentation du projet</h2>
+                <div class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                </div>
 
-            <p>
-                ArtVault est un projet qui vise à proposer une solution
-                numérique pour organiser les objets de collection
-                et leurs documents associés.
-            </p>
+                <h2>Informations du projet</h2>
 
-            <p>
-                L'application permettra de centraliser les informations
-                importantes de chaque objet, notamment les photographies,
-                les certificats d'authenticité, les factures et les
-                estimations de valeur.
-            </p>
-
-        </section>
-
-        <section id="objectifs" class="content-section">
-
-            <h2>02. Objectifs du projet</h2>
-
-            <ul>
-                <li>Organiser les objets de collection.</li>
-                <li>Centraliser les documents importants.</li>
-                <li>Consulter les informations de chaque objet.</li>
-                <li>Suivre l'évolution estimée de la valeur des objets.</li>
-                <li>Faciliter la gestion du patrimoine de collection.</li>
-            </ul>
-
-        </section>
-
-        <section id="fonctionnalites" class="content-section">
-
-            <h2>03. Fonctionnalités envisagées</h2>
-
-            <div class="features">
-
-                <article class="feature-card">
-                    <h3>Ma collection</h3>
-                    <p>
-                        Ajouter et consulter les objets de collection :
-                        montres, tableaux, sculptures et antiquités.
-                    </p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Documents</h3>
-                    <p>
-                        Organiser les certificats d'authenticité,
-                        les factures et les documents.
-                    </p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Évolution des valeurs</h3>
-                    <p>
-                        Consulter les estimations et suivre
-                        l'évolution de la valeur des objets.
-                    </p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Marché et vente</h3>
-                    <p>
-                        Préparer la présentation des objets
-                        destinés à la vente.
-                    </p>
-                </article>
+                <p><strong>Nom :</strong> ArtVault</p>
+                <p><strong>Type :</strong> Application Web</p>
+                <p><strong>Développeur :</strong> Ibrahim Taieb Imrani</p>
+                <p><strong>Formation :</strong> Solicode Web Mobile</p>
 
             </div>
 
         </section>
 
-        <section class="content-section">
-
-            <h2>04. Technologies prévues</h2>
-
-            <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>PHP</span>
-            </div>
-
-        </section>
-
-        <a href="jeu.html" class="back-link">
-            Découvrir le jeu JavaScript →
-        </a>
+        <a href="#" class="back-button">Retour aux projets</a>
 
     </main>
 
-    <footer class="footer">
-        <p>© 2026 Ibrahim Taieb Imrani — Développeur Web Junior</p>
+    <footer>
+        <p>© 2026 Ibrahim Taieb Imrani - Portfolio</p>
     </footer>
 
 </body>

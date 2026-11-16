@@ -1,81 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu du nombre secret</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jeu.css">
     <script src="jeu.js" defer></script>
 </head>
+<body>
 
-<body class="game-page">
+    <main class="game-container">
 
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">IBRAHIM<span>.</span></a>
+        <h1>Jeu du nombre secret</h1>
 
-            <nav>
-                <a href="index.html">Retour au Portfolio</a>
-            </nav>
-        </div>
-    </header>
+        <p>
+            Devinez le nombre secret entre 1 et 100.
+        </p>
 
-    <main class="game-main">
+        <form id="guess-form">
 
-        <section class="game-card">
+            <label for="guess">Votre nombre :</label>
 
-            <span class="project-label">EXERCICE JAVASCRIPT</span>
-
-            <h1>Le nombre secret</h1>
-
-            <p>
-                Je pense à un nombre entre 1 et 100.
-                Essaie de le deviner !
-            </p>
-
-            <form id="guess-form">
-
-                <input
-                    type="number"
-                    id="guess"
-                    class="game-input"
-                    placeholder="Entrez un nombre entre 1 et 100"
-                    min="1"
-                    max="100"
-                    step="1"
-                    autocomplete="off"
-                >
-
-                <button type="submit" class="game-button">
-                    Vérifier
-                </button>
-
-            </form>
-
-            <p id="feedback" class="feedback" aria-live="polite">
-                Bonne chance !
-            </p>
-
-            <p class="attempts">
-                Nombre d'essais : <span id="attempts">0</span>
-            </p>
-
-            <button
-                type="button"
-                id="reset-button"
-                class="game-button reset-button"
+            <input
+                type="text"
+                id="guess"
+                inputmode="numeric"
+                placeholder="Entrez un nombre"
+                autocomplete="off"
             >
-                Recommencer
-            </button>
 
-        </section>
+            <button type="submit">Vérifier</button>
+
+        </form>
+
+        <p id="feedback" aria-live="polite">
+            Bonne chance !
+        </p>
+
+        <p>
+            Nombre d'essais :
+            <span id="attempts">0</span>
+        </p>
+
+        <button type="button" id="reset-button">
+            Nouvelle partie
+        </button>
 
     </main>
-
-    <footer class="footer">
-        <p>© 2026 Ibrahim — Jeu JavaScript</p>
-    </footer>
 
 </body>
 </html>

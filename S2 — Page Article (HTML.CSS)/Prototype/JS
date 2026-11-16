@@ -1,3 +1,4 @@
+
 "use strict";
 let secretNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
@@ -6,12 +7,12 @@ const input = document.getElementById("guess");
 const feedback = document.getElementById("feedback");
 const attemptsDisplay = document.getElementById("attempts");
 const resetButton = document.getElementById("reset-button");
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function(event) {
 
     event.preventDefault();
     attempts++;
-
     attemptsDisplay.textContent = attempts;
+
     const value = input.value.trim();
     const guess = Number(value);
     if (
@@ -20,35 +21,32 @@ form.addEventListener("submit", function (event) {
         guess < 1 ||
         guess > 100
     ) {
-        feedback.textContent =
-            "Ce n'est pas valide. Entrez un nombre entier entre 1 et 100.";
-
+        feedback.textContent = "Ce n'est pas valide !";
         input.value = "";
         input.focus();
-
         return;
     }
     if (guess < secretNumber) {
 
-        feedback.textContent = "C'est plus grand !";
+        feedback.textContent = "C'est PLUS grand !";
 
     } else if (guess > secretNumber) {
 
-        feedback.textContent = "C'est plus petit !";
+        feedback.textContent = "C'est PLUS petit !";
 
     } else {
+
         feedback.textContent =
-            "Bravo ! Vous avez trouvé le nombre secret : " +
-            secretNumber +
-            ". Score : " +
-            attempts +
-            " essais.";
+            "Bravo ! Vous avez trouvé le nombre secret en " +
+            attempts + " essais.";
+
         input.disabled = true;
         form.querySelector("button").disabled = true;
+
     }
 
 });
-resetButton.addEventListener("click", function () {
+resetButton.addEventListener("click", function() {
 
     secretNumber = Math.floor(Math.random() * 100) + 1;
 
