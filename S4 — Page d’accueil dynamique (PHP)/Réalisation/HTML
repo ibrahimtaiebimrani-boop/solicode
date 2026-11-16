@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Ibrahim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1>Ibrahim.</h1>
+
+            <nav>
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="accueil">
+            <div class="container">
+                <h2>Bienvenue sur mon Portfolio</h2>
+                <h3>Développeur Web Junior</h3>
+                <p>
+                    Je suis apprenant à Solicode et passionné
+                    par le développement web.
+                </p>
+                <a href="#projets" class="btn">Voir mes projets</a>
+            </div>
+        </section>
+
+        <section class="about container" id="apropos">
+            <h2>À propos de moi</h2>
+            <p>
+                Je suis un apprenant en développement Web Mobile.
+                J'apprends HTML, CSS, JavaScript et PHP à Solicode.
+            </p>
+        </section>
+
+        <section class="projects container" id="projets">
+
+            <h2>Mes projets</h2>
+
+            <p class="total">
+                Total des projets :
+                <strong><?= $totalProjets ?></strong>
+            </p>
+
+            <div class="projects-grid">
+
+                <?php foreach ($projets as $projet): ?>
+
+                    <article class="project-card">
+
+                        <h3>
+                            <?= htmlspecialchars($projet["titre"]) ?>
+                        </h3>
+
+                        <p>
+                            <?= htmlspecialchars($projet["description"]) ?>
+                        </p>
+
+                        <h4>Technologies :</h4>
+
+                        <ul>
+                            <?php foreach ($projet["technologies"] as $tech): ?>
+                                <li><?= htmlspecialchars($tech) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+
+                        <?php if ($projet["statut"] === "Terminé"): ?>
+
+                            <span class="status completed">
+                                Terminé
+                            </span>
+
+                        <?php else: ?>
+
+                            <span class="status progress">
+                                En cours
+                            </span>
+
+                        <?php endif; ?>
+
+                    </article>
+
+                <?php endforeach; ?>
+
+            </div>
+
+            <?php if ($totalProjets === 0): ?>
+                <p>Aucun projet disponible.</p>
+            <?php endif; ?>
+
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <p>Vous pouvez me contacter pour échanger.</p>
+            <a href="mailto:contact@example.com" class="btn">
+                Me contacter
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ibrahim - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
