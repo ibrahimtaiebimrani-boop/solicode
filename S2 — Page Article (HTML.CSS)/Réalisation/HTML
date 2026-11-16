@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArtVault - Détail d'un objet de collection">
+    <title>ArtVault - Détail de l'objet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">◇ ArtVault</a>
+
+            <nav>
+                <a href="#collection">Ma collection</a>
+                <a href="#details">Détails</a>
+                <a href="#documents">Documents</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a>
+            <span>/</span>
+            <a href="#collection">Ma collection</a>
+            <span>/</span>
+            <span>Rolex Submariner</span>
+        </div>
+        <section class="page-title">
+            <span class="label">DÉTAIL DE L'OBJET</span>
+            <h1>Rolex Submariner</h1>
+            <p>Consultez les informations de votre objet de collection.</p>
+        </section>
+        <section class="object-container" id="details">
+            <div class="object-image">
+
+                <img src="images/montre.jpg"
+                     alt="Montre Rolex Submariner">
+
+            </div>
+            <div class="object-info">
+
+                <span class="category">MONTRE DE COLLECTION</span>
+
+                <h2>Rolex Submariner</h2>
+
+                <p class="description">
+                    Une montre de collection reconnue pour son design
+                    élégant et sa qualité horlogère.
+                </p>
+
+                <div class="estimated-value">
+                    <p>Valeur estimée</p>
+                    <h3>12 500 €</h3>
+                </div>
+
+                <div class="info-list">
+
+                    <div class="info-item">
+                        <span>Référence</span>
+                        <strong>SUB-2026-001</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Catégorie</span>
+                        <strong>Montre</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Date d'acquisition</span>
+                        <strong>15/03/2025</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>État</span>
+                        <strong>Excellent</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Authenticité</span>
+                        <strong class="verified">Vérifiée</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="content-section">
+
+            <h2>01. Description de l'objet</h2>
+
+            <p>
+                Cet objet fait partie d'une collection privée.
+                Il est conservé dans de bonnes conditions.
+                Ses informations et ses documents sont centralisés
+                dans ArtVault afin de faciliter sa gestion.
+            </p>
+
+        </section>
+        <section class="content-section" id="documents">
+
+            <h2>02. Documents associés</h2>
+
+            <div class="documents">
+
+                <article class="document-card">
+                    <div>
+                        <h3>Certificat d'authenticité</h3>
+                        <p>Document justificatif de l'objet.</p>
+                    </div>
+
+                    <span class="document-status">Disponible</span>
+                </article>
+
+                <article class="document-card">
+                    <div>
+                        <h3>Facture d'achat</h3>
+                        <p>Document relatif à l'acquisition.</p>
+                    </div>
+
+                    <span class="document-status">Disponible</span>
+                </article>
+
+            </div>
+
+        </section>
+        <section class="actions" id="collection">
+
+            <h2>03. Actions</h2>
+
+            <a href="#details" class="btn">Consulter les détails</a>
+
+            <a href="#documents" class="btn btn-secondary">
+                Consulter les documents
+            </a>
+
+            <a href="index.html" class="back-link">
+                Retour à la collection
+            </a>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <h3>◇ ArtVault</h3>
+        <p>Votre patrimoine, en toute confiance.</p>
+        <p>© 2026 ArtVault - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
