@@ -1,0 +1,26 @@
+
+<?php
+$projets = [
+    [
+        "titre" => "ArtVault",
+        "description" => "Une application web pour gérer une collection d'objets d'art et de luxe.",
+        "technologies" => ["HTML", "CSS"],
+        "statut" => "Terminé"
+    ],
+    [
+        "titre" => "Mon Portfolio",
+        "description" => "Un site web personnel pour présenter mes compétences et mes projets.",
+        "technologies" => ["HTML", "CSS", "PHP"],
+        "statut" => "En cours"
+    ],
+    [
+        "titre" => "Jeu du nombre secret",
+        "description" => "Un jeu permettant de deviner un nombre secret entre 1 et 100.",
+        "technologies" => ["HTML", "CSS", "JavaScript"],
+        "statut" => "Terminé"
+    ]
+];
+$totalProjets = count($projets);
+require 'template.php';
+
+?>
