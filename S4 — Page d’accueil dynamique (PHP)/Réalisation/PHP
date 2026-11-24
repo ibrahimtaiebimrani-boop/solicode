@@ -1,26 +1,32 @@
-
 <?php
-$projets = [
+
+$collection = [
     [
-        "titre" => "ArtVault",
-        "description" => "Une application web pour gérer une collection d'objets d'art et de luxe.",
-        "technologies" => ["HTML", "CSS"],
-        "statut" => "Terminé"
+        "titre" => "Patek Philippe",
+        "description" => "Montre de luxe et pièce horlogère de collection.",
+        "categorie" => "Montre de luxe",
+        "image" => "image4.jpg",
+        "valeur" => "85 000 $",
+        "statut" => "Authentifié"
     ],
     [
-        "titre" => "Mon Portfolio",
-        "description" => "Un site web personnel pour présenter mes compétences et mes projets.",
-        "technologies" => ["HTML", "CSS", "PHP"],
-        "statut" => "En cours"
+        "titre" => "Amphore grecque",
+        "description" => "Objet antique représentant le patrimoine grec.",
+        "categorie" => "Antiquité",
+        "image" => "image5.jpg",
+        "valeur" => "45 000 $",
+        "statut" => "Authentifié"
     ],
     [
-        "titre" => "Jeu du nombre secret",
-        "description" => "Un jeu permettant de deviner un nombre secret entre 1 et 100.",
-        "technologies" => ["HTML", "CSS", "JavaScript"],
-        "statut" => "Terminé"
+        "titre" => "Portrait à l'huile",
+        "description" => "Œuvre artistique appartenant à une collection privée.",
+        "categorie" => "Peinture",
+        "image" => "image6.jpg",
+        "valeur" => "120 000 $",
+        "statut" => "En vérification"
     ]
 ];
-$totalProjets = count($projets);
-require 'template.php';
+
+require 'index-template.php';
 
 ?>
