@@ -1,93 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Ibrahim</title>
+
+    <title>ArtVault - Collection</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="container header-content">
-            <h1>Ibrahim.</h1>
+    <header class="header">
+        <div class="container">
+            <h1>◇ ArtVault</h1>
 
             <nav>
                 <a href="#accueil">Accueil</a>
-                <a href="#apropos">À propos</a>
-                <a href="#projets">Projets</a>
+                <a href="#collection">Ma collection</a>
+                <a href="#documents">Documents</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main>
 
-        <section class="hero" id="accueil">
-            <div class="container">
-                <h2>Bienvenue sur mon Portfolio</h2>
-                <h3>Développeur Web Junior</h3>
-                <p>
-                    Je suis apprenant à Solicode et passionné
-                    par le développement web.
-                </p>
-                <a href="#projets" class="btn">Voir mes projets</a>
-            </div>
-        </section>
+    <section class="hero" id="accueil">
+        <div class="container">
 
-        <section class="about container" id="apropos">
-            <h2>À propos de moi</h2>
+            <p class="subtitle">Votre patrimoine, en toute confiance.</p>
+
+            <h2>Bienvenue sur ArtVault</h2>
+
+            <h3>Art & Collectibles Asset Manager</h3>
+
             <p>
-                Je suis un apprenant en développement Web Mobile.
-                J'apprends HTML, CSS, JavaScript et PHP à Solicode.
+                Gérez vos montres, œuvres d'art et objets de collection
+                dans un espace sécurisé.
             </p>
-        </section>
 
-        <section class="projects container" id="projets">
+            <a href="#collection" class="btn">
+                Découvrir ma collection
+            </a>
 
-            <h2>Mes projets</h2>
+        </div>
+    </section>
 
-            <p class="total">
-                Total des projets :
-                <strong><?= $totalProjets ?></strong>
+
+    <section class="section" id="collection">
+        <div class="container">
+
+            <h2>Ma collection</h2>
+
+            <p class="section-description">
+                Découvrez vos objets d'art et de luxe.
             </p>
 
             <div class="projects-grid">
 
-                <?php foreach ($projets as $projet): ?>
+                <?php foreach ($collection as $objet): ?>
 
                     <article class="project-card">
 
-                        <h3>
-                            <?= htmlspecialchars($projet["titre"]) ?>
-                        </h3>
+                        <img
+                            src="<?= htmlspecialchars($objet['image']) ?>"
+                            alt="<?= htmlspecialchars($objet['titre']) ?>"
+                        >
 
-                        <p>
-                            <?= htmlspecialchars($projet["description"]) ?>
-                        </p>
+                        <div class="project-content">
 
-                        <h4>Technologies :</h4>
-
-                        <ul>
-                            <?php foreach ($projet["technologies"] as $tech): ?>
-                                <li><?= htmlspecialchars($tech) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-
-                        <?php if ($projet["statut"] === "Terminé"): ?>
-
-                            <span class="status completed">
-                                Terminé
+                            <span class="category">
+                                <?= htmlspecialchars($objet['categorie']) ?>
                             </span>
 
-                        <?php else: ?>
+                            <h3>
+                                <?= htmlspecialchars($objet['titre']) ?>
+                            </h3>
 
-                            <span class="status progress">
-                                En cours
-                            </span>
+                            <p>
+                                <?= htmlspecialchars($objet['description']) ?>
+                            </p>
 
-                        <?php endif; ?>
+                            <p class="value">
+                                Valeur estimée :
+                                <?= htmlspecialchars($objet['valeur']) ?>
+                            </p>
+
+                            <?php if ($objet['statut'] === "Authentifié"): ?>
+
+                                <span class="status authenticated">
+                                    Authentifié
+                                </span>
+
+                            <?php else: ?>
+
+                                <span class="status pending">
+                                    En vérification
+                                </span>
+
+                            <?php endif; ?>
+
+                        </div>
 
                     </article>
 
@@ -95,24 +108,46 @@
 
             </div>
 
-            <?php if ($totalProjets === 0): ?>
-                <p>Aucun projet disponible.</p>
-            <?php endif; ?>
+        </div>
+    </section>
 
-        </section>
 
-        <section class="contact" id="contact">
+    <section class="section documents" id="documents">
+        <div class="container">
+
+            <h2>Documents sécurisés</h2>
+
+            <p>
+                Retrouvez les certificats d'authenticité,
+                les factures et les documents de propriété
+                de vos objets de collection.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="section contact" id="contact">
+        <div class="container">
+
             <h2>Contact</h2>
-            <p>Vous pouvez me contacter pour échanger.</p>
-            <a href="mailto:contact@example.com" class="btn">
-                Me contacter
+
+            <p>
+                Votre patrimoine mérite une gestion de confiance.
+            </p>
+
+            <a href="mailto:contact@artvault.com" class="btn">
+                Nous contacter
             </a>
-        </section>
 
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Ibrahim - Tous droits réservés.</p>
+
+    <footer class="footer">
+        <p>
+            &copy; 2026 ArtVault - Tous droits réservés.
+        </p>
     </footer>
 
 </body>
